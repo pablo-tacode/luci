@@ -13,7 +13,8 @@
 <body>
     <article class="section" id="home">
         <div class="background-img dark1" id="background-img">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920" height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMinYMin slice">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1920"
+                height="1080" viewBox="0 0 1920 1080" preserveAspectRatio="xMinYMin slice">
                 <defs>
                     <clipPath id="clip-path">
                         <rect id="Rectangle_203" data-name="Rectangle 203" width="1920" height="1121.11" fill="none" />
@@ -1619,10 +1620,23 @@
                     </g>
                 </g>
             </svg>
+            <svg id="fireflies-svg" width="1920" height="1080" viewBox="0 0 1920 1080"
+                preserveAspectRatio="xMidYMid slice">
+                <defs>
+                    <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" y="0" x="0" id="glow-color">
+                        <feGaussianBlur stdDeviation="5" />
+                    </filter>
+                </defs>
+            </svg>
         </div>
     </article>
     <button class="bttn" id="bttn-change">Cambiar fondo</button>
     <a href="./src/scroll.html" class="link" id="bttn-scroll">Ir a la prueba en scroll</a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+        integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js"
+        integrity="sha256-fIkQKQryItPqpaWZbtwG25Jp2p5ujqo/NwJrfqAB+Qk=" crossorigin="anonymous"></script>
     <script src="./src/index.js"></script>
 </body>
 
