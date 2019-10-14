@@ -52,7 +52,7 @@ function printFireflies() {
                 values:[{x:randomX1, y:randomY1, opacity: randomOpacity}, {x:randomX2, y:randomY2, opacity: randomOpacity}, {x:randomX3, y:randomY3, opacity: randomOpacity}, {x:randomX4, y:randomY4, opacity: randomOpacity}, {x:randomX1, y:randomY1, opacity: randomOpacity}],
                 autoRotate:true
               },
-            ease:Linear.easeNone, repeat:-1}, i * 0.10
+            ease:Linear.easeNone, repeat:-1}, i * -0.10
         )
     }
 }
