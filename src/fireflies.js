@@ -1,7 +1,7 @@
 const firefliesSvg = document.getElementById("fireflies-svg");
 const tl = new TimelineLite();
 
-function floatingAnimation(i) {
+/* function floatingAnimation(i) {
     let randomX1 = Math.floor(Math.random() * 41) - 10;
     let randomX2 = Math.floor(Math.random() * 91) - 30;
     let randomX3 = Math.floor(Math.random() * 101) - 50;
@@ -41,6 +41,41 @@ function floatingAnimation(i) {
             ease: Linear.easeNone,
             repeat: -1
         }, i * -0.10)
+} */
+
+function movingFireflies(i) {
+    tl
+        .to(`#firefly-${i}`, 20, {
+            bezier: {
+                curviness: 1,
+                type: "soft",
+                values: [{
+                        x: Math.floor(Math.random() * 401) -200,
+                        y: Math.floor(Math.random() * 601) -300,
+                        opacity: 0,
+                    }, {
+                        x: Math.floor(Math.random() * 1001) -500,
+                        y: Math.floor(Math.random() * 101) -50,
+                        opacity: 1,
+                    }, {
+                        x: Math.floor(Math.random() * 1401) -700,
+                        y: Math.floor(Math.random() * 801) -400,
+                        opacity: 0,
+                    }, {
+                        x: Math.floor(Math.random() * 1800) -900,
+                        y: Math.floor(Math.random() * 401) -200,
+                        opacity: 0,
+                    }, {
+                        x: Math.floor(Math.random() * 2001) -1000,
+                        y: Math.floor(Math.random() * 201) -100,
+                        opacity: 0,
+                    }
+                ],
+                autoRotate: true
+            },
+            ease: Linear.easeNone,
+            repeat: -1
+        }, i * -0.5)
 }
 
 function printFireflies() {
@@ -55,7 +90,7 @@ function printFireflies() {
           <circle class="glow" fill="#57BFEC" filter="url(#glow-color)" r="5" cy="${randomCy}" cx="${randomCx}" />
       </g>`
         );
-        floatingAnimation(i)
+        movingFireflies(i)
     }
 }
 
